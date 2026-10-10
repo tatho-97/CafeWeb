@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Corner Bean Coffee - Contact</title>
+	<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="style.css">
+	<script defer src="https://t.contentsquare.net/uxa/2fc5d538ca3bb.js"></script>
+</head>
+<body>
+	<header>
+		<a class="logo" href="index.html">Corner Bean Coffee</a>
+		<nav><a href="index.html">Home</a><a href="menu.html">Menu</a>
+		<a href="contact.html">Contact</a>
+		</nav>
+	</header>
+	<main>
+		<h1>Book a table or send a message</h1>
+		<form id="contact-form" onsubmit="event.preventDefault();document.getElementById('done').hidden=false;">
+			<label for="name">Full name</label><input id="name" required>
+			<label for="email">Email</label><input id="email" type="email" required>
+			<label for="phone">Phone (optional)</label><input id="phone">
+			<label for="type">What is this about?</label>
+			<select id="type">
+				<option>Table booking</option>
+				<option>Catering</option>
+				<option>Feedback</option>
+				<option>Other</option>
+			</select>
+			<label for="guests">Number of guests</label><input id="guests" type="number" min="1" max="20">
+			<label for="msg">Message</label><textarea id="msg" rows="5"></textarea>
+			<p><button class="btn" type="submit" id="btn-send">Send</button></p>
+		</form>
+		<p id="done" hidden><strong>Thanks, your message was sent.</strong></p>
+	</main>
+	<footer>Corner Bean Coffee is a fictional business made for a university web analytics assignment.</footer>
+</body></html>
